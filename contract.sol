@@ -214,7 +214,7 @@ contract OrderBook {
         _orders[_position] = _order;
     }
 
-    function placeOrderInCorrectPlace(Order _order) private {
+    function placeOrderInCorrectPlace(Order _order) private { //sort the order appropriately
         bool inserted = false;
         Order[] storage sameSideOrders = _order.orderSide == OrderSide.BUY ? bids : asks;
 
