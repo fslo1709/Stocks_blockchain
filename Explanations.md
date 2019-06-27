@@ -26,6 +26,9 @@ Each order (line 19) is defined as a structure in the smart contract containing 
 6. The order type to specify the type of orders (Limit or Market)
 7. The order availability to specify the type of availability (OPEN, FOK, IOC)
 
+## Demo
+We tested this code in https://remix.ethereum.org/
+
 
 
 
