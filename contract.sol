@@ -2,13 +2,13 @@ pragma solidity ^0.4.21;
 
 contract OrderBook {
 
-    string private symbol;
+    string private symbol; //name of the transacted asset
     uint private price;
 
-    Order[] private bids;
-    Order[] private asks;
+    Order[] private bids; //Order a sorted array of all the sell actions that were registered and not yet executed
+    Order[] private asks; //Order a sorted array of all the buy actions that were registered and not yet executed
 
-    mapping(address => uint) ownedStocks;
+    mapping(address => uint) ownedStocks; //a mapping between the owner address and the quantity of the assets owned
 
     uint private marketBuyPercent = 5;
 
@@ -264,17 +264,8 @@ contract OrderBook {
         }
     }
 
-    function viewPrice() external view returns (uint){
-        return price;
-    }
-
     modifier stringLength(string _str, uint _length) {
         require(bytes(_str).length == _length);
         _;
     }
-
-    function getQuantityOfStocks() external view returns (uint){
-        return ownedStocks[msg.sender];
-    }
-
 }
