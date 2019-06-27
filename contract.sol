@@ -54,7 +54,7 @@ contract OrderBook {
         Order memory order = Order(now, msg.sender, _quantity, _stockPrice, _orderSide, _orderType, _orderAvailability);
 
         if (_orderAvailability == OrderAvailability.FOK) {
-            if (!canExecuteEntireOrder(order)) {
+            if (!CheckExecuteEntireOrder(order)) {
                 msg.sender.transfer(msg.value);
                 return;
             }
@@ -114,7 +114,7 @@ contract OrderBook {
         while (remainingStocks > 0) {
             if (oppositeOrders.length == 0) {
                 if (_order.orderAvailability == OrderAvailability.IOC || _order.orderType == OrderType.MARKET) {
-                    // do nothing. Order is canceled
+                    // do nothing. Order is cancelled
                     _order.investor.transfer(amountToReturn);
                 }
 
