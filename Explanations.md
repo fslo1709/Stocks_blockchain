@@ -26,7 +26,20 @@ Each order (line 19) is defined as a structure in the smart contract containing 
 6. The order type to specify the type of orders (Limit or Market)
 7. The order availability to specify the type of availability (OPEN, FOK, IOC)
 
-## Demo
+## Demo (not completed, will be updated if time permits)
+This code is runnable in https://remix.ethereum.org/. As of now, I have tried to run it with several configurations (by changing the quantity, stockprice, value, gas price for a transaction, etc) and the transaction costs are stable at around 22000 gas.
+
+Some Examples (gas price for a transaction for all of these examples are 4 gwei): 
+1. https://github.com/fslo1709/Stocks_blockchain/blob/master/case1.JPG
+quantity = 3, stockprice = 5, orderSide = BUY, orderType = MARKET, orderAvailability = FOK
+
+2. https://github.com/fslo1709/Stocks_blockchain/blob/master/case2.JPG
+quantity = 700, stockprice = 50000, orderSide = BUY, orderType = LIMIT, orderAvailability = IOC
+
+3. https://github.com/fslo1709/Stocks_blockchain/blob/master/case3.JPG
+quantity = 3, stockprice = 5, orderSide = SELL, orderType = LIMIT, orderAvailability = OPEN
+
+
 
 
 
