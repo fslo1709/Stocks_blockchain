@@ -17,6 +17,19 @@ A trading action can have different availabilities, and in our implementation, t
 ## Explanations about the code
 To model a Decentralized Stock Exchange, we develop a smart contract that acts like an augmented order book.
 
+Each order (line 19) is defined as a structure in the smart contract containing information about:
+1. The timestamp when the order was registered into the system
+2. The address of the executant 
+3. The quantity of transacted asset
+4. The price at which the executant is willing to buy/sell
+5. The order side of the order that specify whether the action is to buy or sell
+6. The order type to specify the type of orders (Limit or Market)
+7. The order availability to specify the type of availability (OPEN, FOK, IOC)
+
+
+
+
+
 
 
 
