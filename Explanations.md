@@ -26,7 +26,7 @@ Each order (line 19) is defined as a structure in the smart contract containing 
 6. The order type to specify the type of orders (Limit or Market)
 7. The order availability to specify the type of availability (OPEN, FOK, IOC)
 
-## Demo (not completed, will be updated if time permits)
+## Demo
 This code is runnable in https://remix.ethereum.org/. As of now, I have tried to run it with several configurations (by changing the quantity, stockprice, value, gas price for a transaction, etc) and the transaction costs are stable at around 22000 gas.
 
 Some Examples (gas price for a transaction for all of these examples are 4 gwei): 
@@ -44,7 +44,9 @@ quantity = 3, stockprice = 5, orderSide = SELL, orderType = LIMIT, orderAvailabi
 
 
 
+4. Small demonstration of how the code runs and how each change in the input changes the output (have to change the wei value everytime a new transaction is made)
 
+https://youtu.be/sZXal_nRAaY
 
 
 
